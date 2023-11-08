@@ -1,0 +1,30 @@
+#include <iostream>
+#include <vector>
+#include <algorithm>
+
+int main() {
+    std::vector<int> sequence;
+    int num;
+
+    // Ввод последовательности чисел
+    std::cout << "Введите последовательность целых чисел (для завершения введите 0):" << std::endl;
+    while (true) {
+        std::cin >> num;
+        if (num == 0) {
+            break;
+        }
+        sequence.push_back(num);
+    }
+
+    // Поиск минимального числа
+    int minNum = *std::min_element(sequence.begin(), sequence.end());
+
+    // Подсчет количества повторений минимального числа
+    int count = std::count(sequence.begin(), sequence.end(), minNum);
+
+    // Вывод результатов
+    std::cout << "Минимальное число: " << minNum << std::endl;
+    std::cout << "Количество повторений: " << count << std::endl;
+
+    return 0;
+}
