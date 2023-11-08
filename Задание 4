@@ -20,11 +20,14 @@ int main() {
 			minNumIndex = i;
 			minNum = arr[i];
 		}
+		else{}
+
 		if (arr[i] > maxNum || i == 0)
 		{
 			maxNumIndex = i;
 			maxNum = arr[i];
 		}
+		else{}
 	}
 	cout << "Минимальное число будет: " << minNum << ", и его индекс " << minNumIndex << endl;
 	cout << "Максимальное число будет: " << maxNum << ", и его индекс " << maxNumIndex << endl;
